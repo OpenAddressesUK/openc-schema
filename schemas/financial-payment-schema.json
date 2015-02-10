@@ -21,5 +21,6 @@
       "additionalItems": false
     }
   },
+  "additionalProperties": false,
   "required": ["company", "data", "sample_date"]
 }

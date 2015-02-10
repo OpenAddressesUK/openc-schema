@@ -6,7 +6,9 @@
   "properties": {
     "sample_date": {"type": "string", "format": "date"},
     "start_date": {"type": "string", "format": "date"},
+    "start_date_type": {"type": "string"},
     "end_date": {"type": "string", "format": "date"},
+    "end_date_type": {"type": "string"},
     "source_jurisdiction": {
       "description": "Jurisdiction of the source of the data",
       "type": "string"
@@ -23,5 +25,6 @@
       "additionalItems": false
     }
   },
+  "additionalProperties": false,
   "required": ["company", "data", "sample_date"]
 }

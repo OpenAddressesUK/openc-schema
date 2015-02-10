@@ -1,0 +1,6 @@
+{
+	'OneOf': [
+		{"type": "string", "format": "date"},
+		{"type": "null"}
+	]
+}

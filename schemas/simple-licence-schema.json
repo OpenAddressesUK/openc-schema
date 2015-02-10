@@ -55,5 +55,6 @@
       "enum": ["Financial", "Business"]
     }
   },
+  "additionalProperties": false,
   "required": ["source_url", "sample_date", "company_name", "company_jurisdiction"]
 }

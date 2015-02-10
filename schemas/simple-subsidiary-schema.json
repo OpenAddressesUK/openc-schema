@@ -66,5 +66,6 @@
       "type": "string"
     }
   },
+  "additionalProperties": false,
   "required": ["source_url", "sample_date", "parent_name", "parent_jurisdiction", "subsidiary_name", "subsidiary_jurisdiction"]
 }
