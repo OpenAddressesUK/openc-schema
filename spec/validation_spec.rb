@@ -33,15 +33,19 @@ describe "open-schemas" do
     unless data_type == 'includes'
       Dir.glob(File.join(dir, '*.json')).each do |path|
         filename = File.basename(path)
-        match = filename.match(/(.*)-(.*).json/)
+        match = filename.match(/(.*)-([^~]*)~?(.*).json/)
         error_type = match[1]
         error_path = match[2]
+        error_attribute = match[3]
 
         specify "invalid #{data_type} should fail vaildation with #{error_type} at #{error_path}" do
           data = JSON.parse(File.read(path))
           error = Openc::JsonSchema.validate(File.join('schemas', "#{data_type}-schema.json"), data)
           expect(error[:type].to_s).to eq(error_type)
           expect(error[:path]).to eq(error_path)
+          if error[:failed_attribute] == "DependenciesV4"
+            expect(error[:message]).to match(/#{error_attribute}/)
+          end
         end
       end
     end

@@ -1,0 +1,28 @@
+{
+  "title": "Address Schema",
+  "description": "An address",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "saon": {"type": "string"},
+    "paon": {"type": "string"},
+    "street": {"type": "string"},
+    "locality": {"type": "string"},
+    "town": {"type": "string"},
+    "postcode": {
+      "type": "string",
+      "pattern": "^([A-PR-UWYZa-pr-uwyz01][A-Za-z01]?[0-9IOio][0-9A-HJKMNPR-YIOa-hjkmnpr-yio]? ?[0-9][ABD-HJLNPQ-Zabd-hjlnpq-z10]{2})$"
+    },
+    "provenance": {
+      "type": "object",
+      "properties": {
+        "activity":{
+          "$ref": "includes/activity.json"
+        }
+      },
+      "required": ["activity"]
+    }
+  },
+  "additionalProperties": false,
+  "required": ["paon", "street", "town", "provenance"]
+}
