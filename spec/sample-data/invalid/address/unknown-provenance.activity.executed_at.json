@@ -2,10 +2,10 @@
   "paon": "10",
   "street": "Downing Street",
   "town": "London",
-  "postcode": "NOT A POSTCODE",
+  "postcode": "SW1A 2AA",
   "provenance": {
     "activity": {
-      "executed_at": "2015-01-21T16:18:32+00:00",
+      "executed_at": "13th May 2014",
       "processing_scripts": "https://github.com/OpenAddressesUK/sorting_office",
       "derived_from": [
         {

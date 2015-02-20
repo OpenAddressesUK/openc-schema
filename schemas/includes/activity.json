@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "The provenance chain for an address",
+  "type": "object",
+  "properties": {
+    "executed_at": {
+      "type":"string",
+      "format":"date-time"
+    },
+    "processing_scripts": {
+      "type":"string",
+      "format": "uri"
+    },
+    "derived_from": {
+      "$ref": "derivations.json"
+    }
+  },
+  "required": ["executed_at", "processing_scripts", "derived_from"]
+}
