@@ -7,7 +7,7 @@
     "properties": {
       "type": {
         "type":"string",
-        "enum": ["Source", "userInput"]
+        "enum": ["Source", "userInput", "inference"]
       },
       "input": {"type":"string"},
       "urls": {
@@ -16,6 +16,17 @@
           "type": "string",
           "format":"uri"
         }
+      },
+      "inferred_from": {
+        "type":"array",
+        "items": {
+          "type": "string",
+          "format":"uri"
+        }
+      },
+      "inferred_at": {
+        "type":"string",
+        "format":"date-time"
       },
       "inputted_at": {
         "type":"string",
