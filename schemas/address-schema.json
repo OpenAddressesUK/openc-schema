@@ -13,6 +13,10 @@
       "type": "string",
       "pattern": "^([A-PR-UWYZa-pr-uwyz01][A-Za-z01]?[0-9IOio][0-9A-HJKMNPR-YIOa-hjkmnpr-yio]? ?[0-9][ABD-HJLNPQ-Zabd-hjlnpq-z10]{2})$"
     },
+    "valid_at": {
+      "type":"string",
+      "format":"date-time"
+    },
     "provenance": {
       "type": "object",
       "properties": {
