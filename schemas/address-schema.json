@@ -4,6 +4,7 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
+    "uprn": {"type": ["integer"]},
     "saon": {"type": ["string", "null", "integer"]},
     "paon": {"type": ["string", "integer"]},
     "street": {"type": ["string", "null"]},
