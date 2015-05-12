@@ -33,5 +33,9 @@
     }
   },
   "additionalProperties": false,
-  "required": ["paon", "town", "provenance"]
+  "required": ["provenance"],
+  "dependencies": {
+    "town": ["paon", "street"],
+    "street": ["paon", "town"]
+  }
 }
