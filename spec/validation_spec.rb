@@ -42,7 +42,11 @@ describe "open-schemas" do
           data = JSON.parse(File.read(path))
           error = Openc::JsonSchema.validate(File.join('schemas', "#{data_type}-schema.json"), data)
           expect(error[:type].to_s).to eq(error_type)
-          expect(error[:path]).to eq(error_path)
+          if error[:message] =~ /missing property/
+            expect(error[:message]).to match(/#{error_path}/)
+          else
+            expect(error[:path]).to eq(error_path)
+          end
           if error[:failed_attribute] == "DependenciesV4"
             expect(error[:message]).to match(/#{error_attribute}/)
           end
